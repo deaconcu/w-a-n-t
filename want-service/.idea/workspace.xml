@@ -5,6 +5,10 @@
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/want-common/.gradle/" />
+    <ignored path="$PROJECT_DIR$/want-common/build/" />
+    <ignored path="$PROJECT_DIR$/want-api/.gradle/" />
+    <ignored path="$PROJECT_DIR$/want-api/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +24,50 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/want-api/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gradlew" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gradlew">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -37,14 +85,22 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="want" />
+              <option name="name" value="want-service" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="want" />
+                <option name="name" value=":want-common" />
+                <option name="path" value="$PROJECT_DIR$/want-common" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":want-api" />
+                <option name="path" value="$PROJECT_DIR$/want-api" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="want-service" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
             </list>
@@ -58,9 +114,14 @@
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'want'. [incubating]" />
+                <option name="description" value="Displays the components produced by root project 'want-service'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'want-service'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="projects" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project and all projects that depend on it." />
@@ -68,9 +129,8 @@
                 <option name="name" value="buildDependents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'want'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="projects" />
+                <option name="name" value="sourceJar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles main classes." />
@@ -78,7 +138,7 @@
                 <option name="name" value="classes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'want'." />
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'want-service'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="buildEnvironment" />
               </ExternalTaskPojo>
@@ -86,6 +146,11 @@
                 <option name="description" value="Generates Gradle wrapper files. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs this project as a JVM application" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="run" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles test classes." />
@@ -98,14 +163,24 @@
                 <option name="name" value="javadoc" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Creates OS specific scripts to run the project as a JVM application." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="startScripts" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'want-service'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Assembles a jar archive containing the main classes." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="jar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'want'. [incubating]" />
+                <option name="description" value="Installs the project as a distribution as-is." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="model" />
+                <option name="name" value="installDist" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Processes main resources." />
@@ -113,9 +188,14 @@
                 <option name="name" value="processResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'want'." />
+                <option name="description" value="Displays the tasks runnable from root project 'want-service' (some of the displayed tasks may belong to subprojects)." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the main distributions" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDist" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Initializes a new Gradle build. [incubating]" />
@@ -133,7 +213,7 @@
                 <option name="name" value="compileJava" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'want'." />
+                <option name="description" value="Displays the insight into a specific dependency in root project 'want-service'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencyInsight" />
               </ExternalTaskPojo>
@@ -158,7 +238,7 @@
                 <option name="name" value="compileTestJava" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'want'." />
+                <option name="description" value="Displays all dependencies declared in root project 'want-service'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencies" />
               </ExternalTaskPojo>
@@ -178,13 +258,388 @@
                 <option name="name" value="build" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Installs the 'archives' artifacts into the local Maven repository." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="install" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project and all projects it depends on." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="buildNeeded" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'want'." />
+                <option name="description" value="Publishes all publications produced by this project." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="publish" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="distTar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Publishes all Maven publications produced by this project to the local Maven cache." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="publishToMavenLocal" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="distZip" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'want-service'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/want-api">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by project ':want-api'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of project ':want-api'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="sourceJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in project ':want-api'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs this project as a JVM application" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="run" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Creates OS specific scripts to run the project as a JVM application." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="startScripts" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of project ':want-api'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the project as a distribution as-is." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="installDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from project ':want-api'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the main distributions" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="assembleDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in project ':want-api'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in project ':want-api'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the 'archives' artifacts into the local Maven repository." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="install" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Publishes all publications produced by this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="publish" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="distTar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Publishes all Maven publications produced by this project to the local Maven cache." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="publishToMavenLocal" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="distZip" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of project ':want-api'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-api" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/want-common">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by project ':want-common'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of project ':want-common'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="sourceJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in project ':want-common'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs this project as a JVM application" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="run" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Creates OS specific scripts to run the project as a JVM application." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="startScripts" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of project ':want-common'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the project as a distribution as-is." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="installDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from project ':want-common'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the main distributions" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="assembleDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in project ':want-common'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in project ':want-common'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the 'archives' artifacts into the local Maven repository." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="install" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Publishes all publications produced by this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="publish" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="distTar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Publishes all Maven publications produced by this project to the local Maven cache." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="publishToMavenLocal" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
+                <option name="name" value="distZip" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of project ':want-common'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/want-common" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
             </list>
@@ -195,7 +650,6 @@
     <option name="modificationStamps">
       <map>
         <entry key="$PROJECT_DIR$/../../chasing/chasing-server" value="2972377930000" />
-        <entry key="$PROJECT_DIR$" value="2994361214000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -212,9 +666,23 @@
                       </ExternalModuleBuildClasspathPojo>
                     </value>
                   </entry>
+                  <entry key="$PROJECT_DIR$/want-api">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$/want-api" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="$PROJECT_DIR$/want-common">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$/want-common" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
                 </map>
               </option>
-              <option name="name" value="want" />
+              <option name="name" value="want-common" />
               <option name="projectBuildClasspath">
                 <list>
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-bin/37qejo6a26ua35lyn7h1u9v2n/gradle-3.1/lib/ant-1.9.6.jar" />
@@ -297,10 +765,17 @@
       <projects_view />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/settings.gradle" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="978" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -340,6 +815,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -347,6 +823,61 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -372,6 +903,22 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -391,6 +938,52 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="want" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -444,8 +1037,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="978" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -473,6 +1066,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="100" y="100" width="1480" height="850" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -483,5 +1077,39 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/want-api/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

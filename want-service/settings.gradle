@@ -1,2 +1,3 @@
-rootProject.name = 'want'
+include "want-api", "want-common"
+include 'want-api'
 

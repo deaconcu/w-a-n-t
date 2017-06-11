@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/want.iml" filepath="$PROJECT_DIR$/.idea/modules/want.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/want_main.iml" filepath="$PROJECT_DIR$/.idea/modules/want_main.iml" group="want" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/want_test.iml" filepath="$PROJECT_DIR$/.idea/modules/want_test.iml" group="want" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/want-api/want-api.iml" filepath="$PROJECT_DIR$/.idea/modules/want-api/want-api.iml" group="want-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/want-api/want-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/want-api/want-api_main.iml" group="want-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/want-api/want-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/want-api/want-api_test.iml" group="want-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/want-common/want-common.iml" filepath="$PROJECT_DIR$/.idea/modules/want-common/want-common.iml" group="want-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/want-common/want-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/want-common/want-common_main.iml" group="want-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/want-common/want-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/want-common/want-common_test.iml" group="want-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/want-service.iml" filepath="$PROJECT_DIR$/.idea/modules/want-service.iml" />
     </modules>
   </component>
 </project>
