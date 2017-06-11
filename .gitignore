@@ -2,6 +2,7 @@
 *.classpath
 *.project
 *.log
+gradlew*
 .gradle/
 gradle/
 .idea/
