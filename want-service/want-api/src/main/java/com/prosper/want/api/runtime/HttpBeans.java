@@ -2,6 +2,7 @@ package com.prosper.want.api.runtime;
 
 import com.prosper.want.common.boot.RuntimeSpringBeans;
 import com.prosper.want.api.util.Config;
+import com.prosper.want.common.validation.Validation;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.util.thread.QueuedThreadPool;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -35,7 +36,11 @@ import java.sql.SQLException;
 })
 @ComponentScan(basePackages = {
         "com.prosper.want.api.controller",
+        "com.prosper.want.api.service",
         "com.prosper.want.api.util",
+        "com.prosper.want.common.util",
+        "com.prosper.want.common.exception",
+        "com.prosper.want.common.validation",
 })
 @RuntimeSpringBeans(mode = "api-server", withWeb = true)
 public class HttpBeans {
@@ -67,7 +72,7 @@ public class HttpBeans {
     public MapperScannerConfigurer mapperScannerConfigurer() {
         MapperScannerConfigurer configurer = new MapperScannerConfigurer();
         configurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
-        configurer.setBasePackage("com.prosper.chasing.data.mapper");
+        configurer.setBasePackage("com.prosper.want.api.mapper");
         return configurer;
     }
 
@@ -112,5 +117,5 @@ public class HttpBeans {
         PropertySourcesPlaceholderConfigurer source = new PropertySourcesPlaceholderConfigurer();
         return source;
     }
-    
+
 }

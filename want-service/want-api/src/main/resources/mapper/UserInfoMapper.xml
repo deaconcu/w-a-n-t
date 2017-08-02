@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.prosper.want.api.mapper.UserInfoMapper">
+
+	<resultMap id="userInfoMap" type="UserInfo">
+		<result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+	</resultMap>
+
+	<select id="selectOne" parameterType="Map" resultMap="userInfoMap">
+		SELECT * 
+		FROM user_info
+		WHERE id = #{id}
+	</select>
+	
+	<select id="selectListByPage" parameterType="Map" resultMap="userInfoMap">
+        SELECT * 
+        FROM user_info
+        LIMIT #{limit}
+        OFFSET #{offset}
+    </select>
+    
+    <select id="selectListByIds" parameterType="Map" resultMap="userInfoMap">
+        SELECT * 
+        FROM user_info
+        WHERE id IN
+	    <foreach item="item" index="index" collection="ids" open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+    </select>
+    
+    <insert id="insert" parameterType="UserInfo" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+		INSERT INTO user_info
+		SET name = #{name}
+			avatar = #{avatar},
+		    gender = #{gender},
+			intro = #{intro},
+		    create_time = #{createTime}
+			update_time = #{updateTime}
+	</insert>
+
+	<update id="update" parameterType="Friend">
+		UPDATE user_info
+		SET name = #{name}
+		    avatar = #{avatar},
+			gender = #{gender},
+			intro = #{intro},
+			create_time = #{createTime}
+			update_time = #{updateTime}
+		WHERE id = #{id}
+	</update>
+
+	<delete id="delete" parameterType="Map">
+		delete from user_info
+		where id = #{id}
+	</delete>
+	
+</mapper>

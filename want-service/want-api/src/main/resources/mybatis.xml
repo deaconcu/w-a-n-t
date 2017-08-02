@@ -5,9 +5,21 @@
 
 <configuration>
 	<typeAliases>
+		<typeAlias alias="Engagement" type="com.prosper.want.api.bean.Engagement" />
+		<typeAlias alias="Friend" type="com.prosper.want.api.bean.Friend" />
+		<typeAlias alias="Recommend" type="com.prosper.want.api.bean.Recommend" />
+		<typeAlias alias="User" type="com.prosper.want.api.bean.User" />
+		<typeAlias alias="UserInfo" type="com.prosper.want.api.bean.UserInfo" />
+		<typeAlias alias="Want" type="com.prosper.want.api.bean.Want" />
 	</typeAliases>
 
 	<mappers>
+		<mapper resource="mapper/EngagementMapper.xml" />
+		<mapper resource="mapper/FriendMapper.xml" />
+		<mapper resource="mapper/RecommendMapper.xml" />
+		<mapper resource="mapper/UserMapper.xml" />
+		<mapper resource="mapper/UserInfoMapper.xml" />
+		<mapper resource="mapper/WantMapper.xml" />
 	</mappers>
 </configuration>
 

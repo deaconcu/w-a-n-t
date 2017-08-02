@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import org.springframework.stereotype.Component;
 
+@Component
 public class Lang extends HashMap<String, String> {
 	
 	public Lang() {
