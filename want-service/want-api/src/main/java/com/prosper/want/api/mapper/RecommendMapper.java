@@ -9,6 +9,7 @@ public interface RecommendMapper extends MapperI<Recommend>{
 
     List<Recommend> selectListByWant(
             @Param("wantId") int wantId,
+            @Param("offsetId") Integer offsetId,
             @Param("count") int count
     );
 

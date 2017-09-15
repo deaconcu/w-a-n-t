@@ -1,13 +1,14 @@
-package com.prosper.want.common.validation;
+package com.prosper.want.common.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.FIELD)
+/**
+ * 标注某一个controller需要登录校验
+ */
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface IsInt {
-	long min() default 0;
-	long max() default Integer.MAX_VALUE;
+public @interface AuthCheck {
 }

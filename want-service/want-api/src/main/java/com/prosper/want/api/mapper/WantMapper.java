@@ -9,6 +9,7 @@ public interface WantMapper extends MapperI<Want>{
     List<Want> selectListByUser(
             @Param("userId") int userId,
             @Param("offsetId") int offsetId,
-            @Param("count") int count
+            @Param("count") int count,
+            @Param("reverse") boolean reverse
     );
 }

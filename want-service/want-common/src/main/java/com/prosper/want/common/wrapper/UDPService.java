@@ -1,9 +1,6 @@
-package com.prosper.want.common.bean.wrapper;
-
-import java.util.Map;
+package com.prosper.want.common.wrapper;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.handler.codec.http.FullHttpRequest;
 
 public interface UDPService {
     

@@ -44,8 +44,8 @@ public class RecommendController {
                 }
             }
             return recommendMapper.selectListByIds(idList);
-        } if (wantId != null) {
-            return recommendMapper.selectListByWant(wantId, 1000);
+        } if (wantId != null && offsetId != null) {
+            return recommendMapper.selectListByWant(wantId, offsetId, 20);
         } if (userId != null && offsetId != null) {
             return recommendMapper.selectListByUser(userId, offsetId, 20);
         } else {
@@ -56,7 +56,7 @@ public class RecommendController {
     @RequestMapping(value="/recommend",method= RequestMethod.POST)
     public Object createRecommend(HttpServletRequest request, @RequestBody String body) {
         Recommend recommend = validation.getObject(
-                body, Recommend.class, new String[]{"userId", "wantId", "content"});
+                body, Recommend.class, null, new String[]{"id"});
         recommendService.addRecommend(recommend);
         return null;
     }
@@ -64,8 +64,7 @@ public class RecommendController {
     @RequestMapping(value="/recommend",method= RequestMethod.PUT)
     public Object updateRecommend(HttpServletRequest request, @RequestBody String body) {
         int userId = Integer.parseInt(request.getHeader("userId"));
-        Recommend recommend = validation.getObject(
-                body, Recommend.class, new String[]{"id", "userId", "wantId", "content"});
+        Recommend recommend = validation.getObject(body, Recommend.class);
         recommendService.updateRecommend(recommend, userId);
         return null;
     }

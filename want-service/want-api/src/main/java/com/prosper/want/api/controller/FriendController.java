@@ -34,7 +34,7 @@ public class FriendController {
     @RequestMapping(value="/friend",method= RequestMethod.POST)
     public Object createFriend(HttpServletRequest request, @RequestBody String body) {
         int userId = Integer.parseInt(request.getHeader("userId"));
-        Friend friend = validation.getObject(body, Friend.class, new String[]{"friendTo"});
+        Friend friend = validation.getObject(body, Friend.class, null, new String[]{"id"});
         friend.setFriendFrom(userId);
         friendService.addFriend(friend);
         return null;

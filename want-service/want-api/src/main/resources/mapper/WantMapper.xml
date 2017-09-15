@@ -7,6 +7,9 @@
 
 	<resultMap id="wantMap" type="Want">
 		<result property="userId" column="user_id" />
+		<result property="scheduleTime" column="schedule_time" />
+		<result property="scheduleLocation" column="schedule_location" />
+		<result property="scheduleLocationPoint" column="schedule_location_point" />
 		<result property="createTime" column="create_time" />
         <result property="updateTime" column="update_time" />
 	</resultMap>
@@ -20,6 +23,7 @@
 	<select id="selectListByPage" parameterType="Map" resultMap="wantMap">
         SELECT * 
         FROM want
+		ORDER BY id DESC
         LIMIT #{limit}
         OFFSET #{offset}
     </select>
@@ -37,7 +41,13 @@
 		SELECT *
 		FROM want
         WHERE user_id = #{userId}
-        AND id >= #{offsetId}
+		<if test="reverse == true">
+        	AND id &lt;= #{offsetId}
+		</if>
+		<if test="reverse == false">
+			AND id &gt;= #{offsetId}
+		</if>
+		ORDER BY id DESC
         LIMIT #{count}
 	</select>
     
@@ -46,6 +56,11 @@
 		SET title = #{title},
 		    content = #{content},
 		    user_id = #{userId},
+			attendance = #{attendance},
+			state = #{state},
+			schedule_time = #{scheduleTime},
+			schedule_location = #{scheduleLocation},
+			schedule_location_point = #{scheduleLocationPoint},
 		    create_time = #{createTime},
 			update_time = #{updateTime}
 	</insert>
@@ -55,6 +70,11 @@
 		SET title = #{title},
 			content = #{content},
 			user_id = #{userId},
+			attendance = #{attendance},
+			state = #{state},
+			schedule_time = #{scheduleTime},
+			schedule_location = #{scheduleLocation},
+			schedule_location_point = #{scheduleLocationPoint},
 			create_time = #{createTime},
 			update_time = #{updateTime}
 		WHERE id = #{id}

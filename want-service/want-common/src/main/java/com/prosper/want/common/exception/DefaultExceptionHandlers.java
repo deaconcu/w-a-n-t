@@ -1,25 +1,14 @@
 package com.prosper.want.common.exception;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.TypeMismatchException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.MissingServletRequestParameterException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.NoHandlerFoundException;
 
 import com.prosper.want.common.util.CommonUtil;
 import com.prosper.want.common.util.Lang;
-import com.prosper.want.common.util.CommonConstant.OpCode;
+import com.prosper.want.common.util.CommonConstant.ResponseCode;
 
 @Component
 public class DefaultExceptionHandlers {
@@ -31,29 +20,38 @@ public class DefaultExceptionHandlers {
 	
 	@ExceptionHandler(InvalidArgumentException.class)
 	public ExceptionResponse handleII(Exception e) {
-		return new ExceptionResponse(OpCode.INVALID_PARAMS, lang.getLang(e.getMessage() == null ? e.getClass().getName() : e.getMessage()));
+		return new ExceptionResponse(
+				ResponseCode.INVALID_PARAMS,
+				lang.getLang(e.getMessage() == null ? e.getClass().getName() : e.getMessage()));
     }
 	
 	@ExceptionHandler(ResourceNotExistException.class)
 	public ExceptionResponse handleRNFE(Exception e) {
-		return new ExceptionResponse(OpCode.RESOURCE_NOT_FOUND, lang.getLang(e.getMessage() == null ? e.getClass().getName() : e.getMessage()));
+		return new ExceptionResponse(
+				ResponseCode.RESOURCE_NOT_FOUND,
+				lang.getLang(e.getMessage() == null ? e.getClass().getName() : e.getMessage()));
     }
 	
 	@ExceptionHandler(OperationNotAllowedException.class)
 	public ExceptionResponse handleONAE(Exception e) {
-		return new ExceptionResponse(OpCode.NOT_PERMITED, lang.getLang(e.getMessage() == null ? e.getClass().getName() : e.getMessage()));
+		return new ExceptionResponse(
+				ResponseCode.NOT_PERMITED,
+				lang.getLang(e.getMessage() == null ? e.getClass().getName() : e.getMessage()));
     }
 	
 	@ExceptionHandler(NeedAuthorizationException.class)
 	public ExceptionResponse handleNAE(NeedAuthorizationException e) {
-	    return new ExceptionResponse(OpCode.NEED_AUTHORIZATION, lang.getLang("NEED_LOGIN"));
+	    return new ExceptionResponse(
+	    		ResponseCode.NEED_AUTHORIZATION, lang.getLang("NEED_LOGIN"));
     }
 	
 	@ExceptionHandler(Exception.class)
 	public ExceptionResponse handleE(Exception e) {
 		log.error("operation failed, " + "exception:\n" + CommonUtil.getStackTrace(e));
-		return new ExceptionResponse(OpCode.INTERNAL_EXCEPTION, lang.getLang("INTERNAL_EXCEPTION") 
-		        + ":" + lang.getLang(e.getMessage() == null ? e.getClass().getName() : e.getMessage()));
+		return new ExceptionResponse(
+				ResponseCode.INTERNAL_EXCEPTION,
+				lang.getLang("INTERNAL_EXCEPTION") + ":" +
+						lang.getLang(e.getMessage() == null ? e.getClass().getName() : e.getMessage()));
     }
 	
 }

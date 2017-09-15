@@ -7,6 +7,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web:1.2.4.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-jetty:1.2.4.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-actuator:1.2.4.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-aop:1.2.4.RELEASE'
     compile 'org.springframework:spring-jdbc:4.1.5.RELEASE'
     compile 'org.springframework:spring-test:4.1.5.RELEASE'
     compile 'ch.qos.logback:logback-classic:1.1.3'

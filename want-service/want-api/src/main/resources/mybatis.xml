@@ -11,6 +11,8 @@
 		<typeAlias alias="User" type="com.prosper.want.api.bean.User" />
 		<typeAlias alias="UserInfo" type="com.prosper.want.api.bean.UserInfo" />
 		<typeAlias alias="Want" type="com.prosper.want.api.bean.Want" />
+		<typeAlias alias="Comment" type="com.prosper.want.api.bean.Comment" />
+		<typeAlias alias="Invitation" type="com.prosper.want.api.bean.Invitation" />
 	</typeAliases>
 
 	<mappers>
@@ -20,6 +22,8 @@
 		<mapper resource="mapper/UserMapper.xml" />
 		<mapper resource="mapper/UserInfoMapper.xml" />
 		<mapper resource="mapper/WantMapper.xml" />
+		<mapper resource="mapper/CommentMapper.xml" />
+		<mapper resource="mapper/InvitationMapper.xml" />
 	</mappers>
 </configuration>
 

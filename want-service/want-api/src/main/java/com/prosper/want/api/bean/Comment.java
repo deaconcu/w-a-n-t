@@ -1,15 +1,17 @@
 package com.prosper.want.api.bean;
 
 /**
- * Created by deacon on 2017/6/12.
+ * Created by deacon on 2017/8/19.
  */
-public class Recommend {
+public class Comment {
 
     private int id;
-    private int userId;
     private int wantId;
-    private int state;
     private String content;
+    private int fromUserId;
+    private String fromUserName;
+    private int toUserId;
+    private String toUserName;
     private String createTime;
     private String updateTime;
 
@@ -19,14 +21,6 @@ public class Recommend {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
     }
 
     public int getWantId() {
@@ -61,11 +55,35 @@ public class Recommend {
         this.updateTime = updateTime;
     }
 
-    public int getState() {
-        return state;
+    public int getFromUserId() {
+        return fromUserId;
     }
 
-    public void setState(int state) {
-        this.state = state;
+    public void setFromUserId(int fromUserId) {
+        this.fromUserId = fromUserId;
+    }
+
+    public int getToUserId() {
+        return toUserId;
+    }
+
+    public void setToUserId(int toUserId) {
+        this.toUserId = toUserId;
+    }
+
+    public String getToUserName() {
+        return toUserName;
+    }
+
+    public void setToUserName(String toUserName) {
+        this.toUserName = toUserName;
+    }
+
+    public String getFromUserName() {
+        return fromUserName;
+    }
+
+    public void setFromUserName(String fromUserName) {
+        this.fromUserName = fromUserName;
     }
 }

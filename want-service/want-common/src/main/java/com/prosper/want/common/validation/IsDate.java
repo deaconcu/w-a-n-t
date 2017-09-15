@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface IsInt {
-	long min() default 0;
-	long max() default Integer.MAX_VALUE;
+public @interface IsDate {
+	// 是否大于当前时间
+	boolean laterOn() default false;
 }

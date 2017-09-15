@@ -8,6 +8,8 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface IsString {
-	int minLength();
-	int maxLength();
+	// 是否允许为空字符串
+	boolean empty() default false;
+	int minLength() default 0;
+	int maxLength() default 100000;
 }

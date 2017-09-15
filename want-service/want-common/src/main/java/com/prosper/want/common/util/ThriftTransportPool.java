@@ -1,4 +1,4 @@
-package com.prosper.want.common.bean;
+package com.prosper.want.common.util;
 
 import java.util.HashMap;
 import java.util.Map;

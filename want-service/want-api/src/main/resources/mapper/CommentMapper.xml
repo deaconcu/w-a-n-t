@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.prosper.want.api.mapper.CommentMapper">
+
+	<resultMap id="commentMap" type="Comment">
+		<result property="wantId" column="want_id" />
+		<result property="fromUserId" column="from_user_id" />
+		<result property="toUserId" column="to_user_id" />
+        <result property="updateTime" column="update_time" />
+		<result property="createTime" column="create_time" />
+	</resultMap>
+
+	<select id="selectOne" parameterType="Map" resultMap="commentMap">
+		SELECT *
+		FROM comment
+		WHERE id = #{id}
+	</select>
+	
+	<select id="selectListByPage" parameterType="Map" resultMap="commentMap">
+        SELECT * 
+        FROM comment
+		ORDER BY id DESC
+        LIMIT #{limit}
+        OFFSET #{offset}
+    </select>
+    
+    <select id="selectListByIds" parameterType="Map" resultMap="commentMap">
+        SELECT * 
+        FROM comment
+        WHERE id IN
+	    <foreach item="item" index="index" collection="ids" open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+    </select>
+
+	<select id="selectListByWant" parameterType="Map" resultMap="commentMap">
+		SELECT *
+		FROM comment
+        WHERE want_id = #{wantId}
+        AND id >= #{offsetId}
+		ORDER BY id
+        LIMIT #{count}
+	</select>
+    
+    <insert id="insert" parameterType="Comment" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+		INSERT INTO comment
+		SET want_id = #{wantId},
+		    content = #{content},
+		    from_user_id = #{fromUserId},
+			to_user_id = #{toUserId},
+		    create_time = #{createTime},
+			update_time = #{updateTime}
+	</insert>
+
+	<update id="update" parameterType="Comment">
+		UPDATE comment
+		SET want_id = #{wantId},
+			content = #{content},
+			from_user_id = #{fromUserId},
+		    to_user_id = #{toUserId},
+		    create_time = #{createTime},
+		    update_time = #{updateTime}
+		WHERE id = #{id}
+	</update>
+
+	<delete id="delete" parameterType="Map">
+		delete from comment
+		where id = #{id}
+	</delete>
+	
+</mapper>

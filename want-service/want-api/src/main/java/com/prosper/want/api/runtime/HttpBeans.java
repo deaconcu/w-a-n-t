@@ -41,6 +41,8 @@ import java.sql.SQLException;
         "com.prosper.want.common.util",
         "com.prosper.want.common.exception",
         "com.prosper.want.common.validation",
+        "com.prosper.want.common.service",
+        "com.prosper.want.common.aspect",
 })
 @RuntimeSpringBeans(mode = "api-server", withWeb = true)
 public class HttpBeans {
@@ -50,7 +52,7 @@ public class HttpBeans {
         DriverManagerDataSource instance = new DriverManagerDataSource();
         instance.setDriverClassName("com.mysql.jdbc.Driver");
         instance.setUrl("jdbc:mysql://" + config.dbIp + ":" + config.dbPort + "/" + config.dbName
-                +"?useUnicode=true&characterEncoding=utf8");
+                +"?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull");
         System.out.println(instance.getUrl());
         instance.setUsername(config.dbUserName);                                  
         instance.setPassword(config.dbPassword);

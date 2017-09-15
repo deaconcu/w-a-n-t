@@ -38,6 +38,8 @@
 		SELECT *
 		FROM recommend
 		WHERE want_id = #{wantId}
+		AND id &lt;= #{offsetId}
+		order by id desc
 		LIMIT #{count}
 	</select>
 
@@ -54,6 +56,7 @@
 		SET user_id = #{userId},
 		    want_id = #{wantId},
 			content = #{content},
+			state = #{state},
 		    create_time = #{createTime},
 			update_time = #{updateTime}
 	</insert>
@@ -63,6 +66,7 @@
 		SET user_id = #{userId},
 			want_id = #{wantId},
 			content = #{content},
+			state = #{state},
 			create_time = #{createTime},
 			update_time = #{updateTime}
 		WHERE id = #{id}

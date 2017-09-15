@@ -27,7 +27,7 @@ public class UserController {
 
     @RequestMapping(value="/user",method= RequestMethod.POST)
     public Object createUser(HttpServletRequest request, @RequestBody String body) {
-        User user = validation.getObject(body, User.class, new String[]{"phone", "name"});
+        User user = validation.getObject(body, User.class, null, new String[]{"id"});
         userService.addUser(user);
         return null;
     }

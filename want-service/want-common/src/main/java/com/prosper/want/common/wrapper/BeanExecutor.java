@@ -1,4 +1,4 @@
-package com.prosper.want.common.bean.wrapper;
+package com.prosper.want.common.wrapper;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

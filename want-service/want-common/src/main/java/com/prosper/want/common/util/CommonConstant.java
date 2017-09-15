@@ -14,7 +14,7 @@ public class CommonConstant {
         public static final String session = "c_session_";
     }
 	
-	public static class OpCode {
+	public static class ResponseCode {
 		public static final short SUCCESS = 200;
 		public static final short INVALID_PARAMS = 400;
 		public static final short NEED_AUTHORIZATION = 401;

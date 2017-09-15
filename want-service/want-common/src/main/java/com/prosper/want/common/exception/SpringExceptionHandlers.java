@@ -1,24 +1,18 @@
 package com.prosper.want.common.exception;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.TypeMismatchException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.prosper.want.common.util.CommonUtil;
 import com.prosper.want.common.util.Lang;
-import com.prosper.want.common.util.CommonConstant.OpCode;
+import com.prosper.want.common.util.CommonConstant.ResponseCode;
 
 @ControllerAdvice
 @Component
@@ -33,7 +27,7 @@ public class SpringExceptionHandlers {
 	@ResponseBody
 	public ExceptionResponse handleE(HttpServletRequest request, Exception e) {
 		log.error("spring exception:\n" + CommonUtil.getStackTrace(e));
-		return new ExceptionResponse(OpCode.INVALID_PARAMS, lang.getLang("INVALID_PARAM") 
+		return new ExceptionResponse(ResponseCode.INVALID_PARAMS, lang.getLang("INVALID_PARAM")
 		        + ":" + getMessage(e.getMessage() == null ? e.getClass().getName() : e.getMessage()));
     }
 	
